@@ -1,0 +1,9 @@
+import {useRef} from 'react';import {motion,useScroll,useTransform} from 'framer-motion';import {SITE} from '../config';import {waDefault} from '../lib';import {Petals,Img} from './Petal';
+export default function Hero(){const r=useRef(null);const{scrollYProgress}=useScroll({target:r,offset:['start start','end start']});const y=useTransform(scrollYProgress,[0,1],['0%','18%']);
+return(<section id="inicio" ref={r} className="relative grid min-h-[92svh] overflow-hidden bg-gradient-to-br from-rosa to-vinho pt-16 text-white md:grid-cols-2">
+<Petals className="absolute -left-16 top-24 w-72 text-white"/><Petals className="absolute -bottom-20 right-1/3 w-80 text-white"/>
+<div className="relative z-10 flex flex-col justify-center gap-6 px-6 py-16 md:px-16"><motion.h1 initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:.8}} className="text-5xl sm:text-6xl lg:text-7xl">Flores que transformam momentos em memórias.</motion.h1>
+<motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.4,duration:.8}} className="max-w-md text-lg text-white/90">Arranjos especiais para celebrar, surpreender e demonstrar sentimentos.</motion.p>
+<motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.7}} className="flex flex-wrap gap-3"><a href="#catalogo" className="inline-flex min-h-12 items-center rounded-full bg-white px-7 font-semibold text-vinho transition hover:bg-petala">Explorar catálogo</a>
+<a href={waDefault()} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center rounded-full border border-white px-7 font-semibold transition hover:bg-white/15">Faça seu pedido</a></motion.div></div>
+<motion.div style={{y}} className="relative min-h-80 md:min-h-0"><div className="absolute inset-6 overflow-hidden rounded-t-full md:inset-12"><Img src={SITE.heroImage} alt="Arranjo floral da Andrea Flores"/></div></motion.div></section>);}
