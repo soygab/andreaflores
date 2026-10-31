@@ -1,9 +1,90 @@
-// DEMONSTRATIVO: nomes, descrições e opções são exemplos. Substitua por produtos reais. price só se cadastrado.
-export const categories=['Buquês de rosas','Buquês variados','Arranjos florais','Flores em vasos','Cestas e presentes','Aniversários','Românticas','Coroas e homenagens'];
-const d=(id,name,category,occasion)=>({id,name,category,occasion,image:'',price:null,demo:true,
- short:'Exemplo de produto. Descrição a ser cadastrada.',long:'Descrição completa a ser cadastrada pela loja.',options:['Opções a confirmar com a loja']});
-export const products=[
- d(1,'Buquê de rosas (exemplo)','Buquês de rosas','namoro'),d(2,'Buquê variado (exemplo)','Buquês variados','aniversario'),
- d(3,'Arranjo floral (exemplo)','Arranjos florais','casamento'),d(4,'Flor em vaso (exemplo)','Flores em vasos','maes'),
- d(5,'Cesta de presente (exemplo)','Cestas e presentes','aniversario'),d(6,'Flores de aniversário (exemplo)','Aniversários','aniversario'),
- d(7,'Arranjo romântico (exemplo)','Românticas','namoro'),d(8,'Coroa de flores (exemplo)','Coroas e homenagens','homenagem')];
+// =====================================================================
+//  PRODUTOS DO CATÁLOGO  →  [EDITAR] substitua os exemplos por produtos reais
+//  Campos: id, name, category (uma de `categories`), occasion, image, price,
+//          short, long, options. Remova demo:true nos produtos reais.
+//  occasion liga o produto ao card de Ocasiões: namoro | aniversario | maes | casamento | homenagem
+//  price: número (ex.: 89.9) ou null para ocultar o preço.
+//  image: '/images/arquivo.jpg' (arquivo em public/images/).
+// =====================================================================
+export const categories = [
+  'Romance',
+  'Buquês variados',
+  'Arranjos florais',
+  'Flores em vasos',
+  'Cestas e presentes',
+  'Aniversários',
+  'Românticas',
+  'Coroas e homenagens',
+];
+const r = (id, name, category, occasion) => ({
+  id,
+  name,
+  category,
+  occasion,
+  image: '/images/romance.jpg',
+  price: 'R$450,00',
+  demo: true,
+  short: 'Lindo buquê de rosas vermelhas.',
+  long: 'Cerca de aproximadamente 30 rosas vermelhas.',
+  options: ['Confirmar disponibilidade com a loja'],
+});
+
+const l = (id, name, category, occasion) => ({
+  id,
+  name,
+  category,
+  occasion,
+  image: '/images/liriopocket.jpg',
+  price: 'R$120,00',
+  demo: true,
+  short: 'Charmoso buquê de lírios com astromélias.',
+  long: '1 lírio + astromélias.',
+  options: ['Confirmar disponibilidade com a loja'],
+});
+
+const m = (id, name, category, occasion) => ({
+  id,
+  name,
+  category,
+  occasion,
+  image: '/images/mixgirassol.jpg',
+  price: 'R$90,00',
+  demo: true,
+  short: 'Encanto de girrasóis com flores diversas.',
+  long: 'Mix de flores aleatórias.',
+  options: ['Confirmar disponibilidade com a loja'],
+});
+
+const p = (id, name, category, occasion) => ({
+  id,
+  name,
+  category,
+  occasion,
+  image: '/images/princesa.jpg',
+  price: 'R$420,00',
+  demo: true,
+  short: 'Lindo buquê de rosas.',
+  long: 'Aproximadamente 30 rosas + folhagem.',
+  options: ['Confirmar disponibilidade com a loja'],
+});
+
+const c = (id, name, category, occasion) => ({  
+  id,
+  name,
+  category,
+  occasion,
+  image: '/images/cesta30.jpg',
+  price: 'R$110,00',
+  demo: true,
+  short: 'Cesta com 30 itens e flores para surpreender!',
+  long: 'Composto por uma cesta como foto, kit para café com 30 itens:',
+  options: ['Confirmar disponibilidade com a loja'],
+});
+
+export const products = [
+  r(1, 'Romance', 'Romance', 'namoro'),
+  l(2, 'Lírio Pocket', 'Romance', 'namoro'),
+  m(3, 'Mix Girassol Singelo', 'Romance', 'namoro'),
+  p(4, 'Princesa', 'Romance', 'namoro'),
+  c(4, 'Cesta 30', 'Cestas e presentes', 'namoro'),
+];

@@ -1,7 +1,38 @@
-@import "tailwindcss";
-@theme{--color-rosa:#E6007E;--color-vinho:#A5163F;--color-petala:#FFF4F7;--color-tinta:#2A1118;
---font-serif:"Cormorant Garamond",Georgia,serif;--font-sans:"DM Sans",system-ui,sans-serif}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}body{font-family:var(--font-sans);color:var(--color-tinta);background:#fff}
-h1,h2,h3{font-family:var(--font-serif);font-weight:600;line-height:1.05}
-:focus-visible{outline:2px solid var(--color-rosa);outline-offset:3px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.01ms!important}}
+@import 'tailwindcss';
+@theme {
+  --color-rosa: #e6007e;
+  --color-vinho: #a5163f;
+  --color-petala: #fff4f7;
+  --color-tinta: #2a1118;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+body {
+  font-family: var(--font-sans);
+  color: var(--color-tinta);
+  background: #fff;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.05;
+}
+:focus-visible {
+  outline: 2px solid var(--color-rosa);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
